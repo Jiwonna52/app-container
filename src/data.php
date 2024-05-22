@@ -1,9 +1,9 @@
 <?php
 // 데이터베이스 연결 설정
-$db_host = '';
+$db_host = 'database-1.cr60wuc6k949.us-east-1.rds.amazonaws.com';
 $db_user = 'admin';
-$db_pass = 'lab-password';
-$db_name = 'web01';
+$db_pass = 'qlalfqjsgh1234';
+$db_name = 'database-1';
 
 // 데이터베이스에 연결
 $con = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
