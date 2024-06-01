@@ -3,7 +3,7 @@
 $db_host = 'test-db.cr60wuc6k949.us-east-1.rds.amazonaws.com';
 $db_user = 'admin';
 $db_pass = 'qlalfqjsgh123';
-$db_name = 'database-1';
+$db_name = 'web01';
 
 // 데이터베이스에 연결
 $con = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
