@@ -1,6 +1,6 @@
 <?php
 // 데이터베이스 연결 설정
-$db_host = 'main-test-db.cr60wuc6k949.us-east-1.rds.amazonaws.com';
+$db_host = 'main-db-test.cr60wuc6k949.us-east-1.rds.amazonaws.com';
 $db_user = 'admin';
 $db_pass = 'qlalfqjsgh123';
 $db_name = 'web01';
