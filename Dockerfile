@@ -4,20 +4,12 @@ FROM php:7.4-apache
 # Install necessary extensions and tools
 RUN docker-php-ext-install mysqli
 
-# Install Redis extension using pecl
-RUN pecl install redis && docker-php-ext-enable redis
+# Install Redis PHP extension
+RUN pecl install redis \
+    && docker-php-ext-enable redis
 
 # Set the working directory
 WORKDIR /var/www/html/
-
-# Copy composer.json only
-COPY src/composer.json ./
-
-# Install Composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
-# Install PHP dependencies using Composer
-RUN composer install
 
 # Copy the rest of the application code
 COPY src/ /var/www/html/
