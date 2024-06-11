@@ -10,8 +10,8 @@ RUN pecl install redis && docker-php-ext-enable redis
 # Set the working directory
 WORKDIR /var/www/html/
 
-# Copy composer.json and composer.lock if exists
-COPY src/composer.json src/composer.lock ./
+# Copy composer.json only
+COPY src/composer.json ./
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
