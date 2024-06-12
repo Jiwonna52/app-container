@@ -11,7 +11,7 @@ function redisConnect() {
                 'verify_peer_name' => false,
             ],
         ]);
-        $redis->connect('test-redis.5ewvz6.clustercfg.use1.cache.amazonaws.com:6379', 6379, 10, NULL, 0, 0, ['stream_context' => $context]);
+        $redis->connect('test-redis2.5ewvz6.ng.0001.use1.cache.amazonaws.com', 6379, 10, NULL, 0, 0, ['stream_context' => $context]);
         return $redis;
     } catch (Exception $e) {
         die('Redis connection failed: ' . $e->getMessage());
